@@ -1985,10 +1985,12 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			Confirm.Text = ""
 			Confirm.TextColor3 = Color3.fromRGB(0, 0, 0)
 			Confirm.TextSize = 14.000
+			Confirm.ZIndex = 10
 
 			ConfirmCorner.CornerRadius = UDim.new(0, 4)
 			ConfirmCorner.Name = "ConfirmCorner"
 			ConfirmCorner.Parent = Confirm
+			ConfirmCorner.ZIndex = 10
 
 			ConfirmTitle.Name = "ConfirmTitle"
 			ConfirmTitle.Parent = Confirm
@@ -2001,6 +2003,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			ConfirmTitle.TextSize = 15.000
 			ConfirmTitle.TextTransparency = 0.300
 			ConfirmTitle.TextXAlignment = Enum.TextXAlignment.Left
+			ConfirmTitle.ZIndex = 10
 
 			BoxColor.Name = "BoxColor"
 			BoxColor.Parent = Title
@@ -2256,6 +2259,8 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			Confirm.MouseButton1Click:Connect(
 				function()
 					ColorPickerToggled = not ColorPickerToggled
+					ColorSelection.Visible = false
+					HueSelection.Visible = false
 					Colorpicker:TweenSize(UDim2.new(0, 457, 0, 43), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					TweenService:Create(
 						Title,
