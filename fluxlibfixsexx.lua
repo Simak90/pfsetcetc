@@ -1,3 +1,9 @@
+if _G.hereiambabyhehe ~= true then
+_G.hereiambabyhehe = true
+elseif _G.hereiambabyhehe == true then
+FluxLib:Destroy()
+FluxLib:Remove()
+end
 local Flux = {RainbowColorValue = 0, HueSelectionPosition = 0}
 local PresetColor = Color3.fromRGB(66, 134, 255)
 local UserInputService = game:GetService("UserInputService")
@@ -11,16 +17,6 @@ local FluxLib = Instance.new("ScreenGui")
 FluxLib.Name = "FluxLib"
 FluxLib.Parent = game.CoreGui
 FluxLib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-function detectIfFucked()
-if _G.hereiambabyhehe ~= true then
-_G.hereiambabyhehe = true
-elseif _G.hereiambabyhehe == true then
-FluxLib:Destroy()
-FluxLib:Remove()
-end
-end
-pcall(detectIfFucked)
 
 coroutine.wrap(
 	function()
@@ -1989,12 +1985,10 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			Confirm.Text = ""
 			Confirm.TextColor3 = Color3.fromRGB(0, 0, 0)
 			Confirm.TextSize = 14.000
-			Confirm.ZIndex = 10
 
 			ConfirmCorner.CornerRadius = UDim.new(0, 4)
 			ConfirmCorner.Name = "ConfirmCorner"
 			ConfirmCorner.Parent = Confirm
-			ConfirmCorner.ZIndex = 10
 
 			ConfirmTitle.Name = "ConfirmTitle"
 			ConfirmTitle.Parent = Confirm
@@ -2007,7 +2001,6 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			ConfirmTitle.TextSize = 15.000
 			ConfirmTitle.TextTransparency = 0.300
 			ConfirmTitle.TextXAlignment = Enum.TextXAlignment.Left
-			ConfirmTitle.ZIndex = 10
 
 			BoxColor.Name = "BoxColor"
 			BoxColor.Parent = Title
