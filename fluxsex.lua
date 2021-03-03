@@ -1,3 +1,5 @@
+if _G.hereiambabyhehe ~= true then
+_G.hereiambabyhehe = true
 local Flux = {RainbowColorValue = 0, HueSelectionPosition = 0}
 local PresetColor = Color3.fromRGB(66, 134, 255)
 local UserInputService = game:GetService("UserInputService")
@@ -11,16 +13,6 @@ local FluxLib = Instance.new("ScreenGui")
 FluxLib.Name = "FluxLib"
 FluxLib.Parent = game.CoreGui
 FluxLib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-function detectFuck()
-if _G.hereiambabyhehe ~= true then
-_G.hereiambabyhehe = true
-elseif _G.hereiambabyhehe == true then
-FluxLib:Destroy()
-FluxLib:Remove()
-end
-end
-pcall(detectFuck)
 
 coroutine.wrap(
 	function()
@@ -2761,3 +2753,4 @@ function Flux:Window(text, bottom,mainclr,toclose)
 	return Tabs
 end
 return Flux
+end
