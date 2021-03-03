@@ -2092,6 +2092,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 					wait(.4)
 					Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 				end
+				ColorPickerToggled = not ColorPickerToggled
 			end)
 			
 
@@ -2254,11 +2255,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 
 			Confirm.MouseButton1Click:Connect(
 				function()
-					if ColorPickerToggled then
-					ColorPickerToggled = false
-				else
-					ColorPickerToggled = true
-				end
+					ColorPickerToggled = not ColorPickerToggled
 					Colorpicker:TweenSize(UDim2.new(0, 457, 0, 43), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					TweenService:Create(
 						Title,
@@ -2283,9 +2280,8 @@ function Flux:Window(text, bottom,mainclr,toclose)
 					wait(.4)
 					Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 				end
-			)
-			Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
-		end
+			end)
+
 		function ContainerContent:Line()
 			local Line = Instance.new("TextButton")
 			local LineCorner = Instance.new("UICorner")
