@@ -2280,6 +2280,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 					wait(.4)
 					Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 				end)
+		end
 
 		function ContainerContent:Line()
 			local Line = Instance.new("TextButton")
@@ -2752,7 +2753,5 @@ function Flux:Window(text, bottom,mainclr,toclose)
 		return ContainerContent
 	end
 	return Tabs
-end
-return Window
 end
 return Flux
