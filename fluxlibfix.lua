@@ -202,12 +202,12 @@ function Flux:Window(text, bottom,mainclr,toclose)
 					MainFrame:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					uitoggled = true
 					repeat wait() 
-					until MainFrame.Size.Y.Offset <= 1.5
+					until MainFrame.Size.Y.Offset <= 1
 					FluxLib.Enabled = false
 				else
 					MainFrame:TweenSize(UDim2.new(0, 706, 0, 484), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					repeat wait() 
-					until MainFrame.Size.Y.Offset > 1.5
+					until MainFrame.Size.Y.Offset > 1
 					FluxLib.Enabled = true
 					uitoggled = false
 				end
@@ -2039,7 +2039,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			end)
 		 	
 			ColorpickerBtn.MouseButton1Click:Connect(function()
-				if ColorPickerToggled == true then
+				if ColorPickerToggled == false then
 					ColorSelection.Visible = true
 					HueSelection.Visible = true
 					Colorpicker:TweenSize(UDim2.new(0, 457, 0, 138), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
