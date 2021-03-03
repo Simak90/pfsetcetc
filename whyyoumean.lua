@@ -202,14 +202,12 @@ function Flux:Window(text, bottom,mainclr,toclose)
 					MainFrame:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					uitoggled = true
 					repeat wait() 
-						kekksize = MainFrame.Size 
-					until kekksize <= UDim2.new(0, 1.5, 0, 1.5)
+					until MainFrame.Y.Offset <= 1.5
 					FluxLib.Enabled = false
 				else
 					MainFrame:TweenSize(UDim2.new(0, 706, 0, 484), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					repeat wait() 
-						kekksize = MainFrame.Size 
-					until kekksize > UDim2.new(0, 1.5, 0, 1.5)
+					until MainFrame.Y.Offset > 1.5
 					FluxLib.Enabled = true
 					uitoggled = false
 				end
@@ -2094,7 +2092,6 @@ function Flux:Window(text, bottom,mainclr,toclose)
 					wait(.4)
 					Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 				end
-				ColorPickerToggled = not ColorPickerToggled
 			end)
 			
 
