@@ -201,11 +201,15 @@ function Flux:Window(text, bottom,mainclr,toclose)
 				if uitoggled == false then
 					MainFrame:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					uitoggled = true
-					repeat wait() until MainFrame.Size <= UDim2.new(0, 1.5, 0, 1.5)
+					repeat wait() 
+						kekksize = MainFrame.Size 
+					until kekksize <= UDim2.new(0, 1.5, 0, 1.5)
 					FluxLib.Enabled = false
 				else
 					MainFrame:TweenSize(UDim2.new(0, 706, 0, 484), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
-					repeat wait() until MainFrame.Size > UDim2.new(0, 1.5, 0, 1.5)
+					repeat wait() 
+						kekksize = MainFrame.Size 
+					until kekksize > UDim2.new(0, 1.5, 0, 1.5)
 					FluxLib.Enabled = true
 					uitoggled = false
 				end
