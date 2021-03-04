@@ -895,27 +895,28 @@ function Flux:Window(text, bottom,mainclr)
 								_G.changeToggleColor = function()
 				repeat wait() until Toggled == true
 				repeat wait()
-									ToggleCircle:TweenPosition(UDim2.new(0.37, 0,-0.273, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
 					TweenService:Create(
 						ToggleCircle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 =_G.PresetColor}
 					):Play()
+				until Toggled == false
+				end
+				coroutine.wrap(_G.changeToggleColor)()
 					ToggleCircle:TweenPosition(UDim2.new(0.37, 0,-0.273, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
 					TweenService:Create(
 						ToggleCircle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 =_G.PresetColor}
 					):Play()
+					ToggleCircle:TweenPosition(UDim2.new(0.37, 0,-0.273, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
+				else
 					ToggleCircle:TweenPosition(UDim2.new(0, 0,-0.273, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
 					TweenService:Create(
 						ToggleCircle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 = Color3.fromRGB(255,255,255)}
-					):Play()
-				until Toggled == false
-				end
-				coroutine.wrap(_G.changeToggleColor)()
+						):Play()
 			end
 				pcall(callback, Toggled)
 				Toggled = not Toggled
