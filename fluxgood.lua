@@ -1,9 +1,3 @@
-if _G.hereiambabyhehe ~= true then
-_G.hereiambabyhehe = true
-elseif _G.hereiambabyhehe == true then
-FluxLib:Destroy()
-FluxLib:Remove()
-end
 local Flux = {RainbowColorValue = 0, HueSelectionPosition = 0}
 _G.PresetColor = Color3.fromRGB(66, 134, 255)
 local UserInputService = game:GetService("UserInputService")
@@ -639,6 +633,8 @@ function Flux:Window(text, bottom,mainclr)
 			ArrowBtn.MouseButton1Click:Connect(function()
 				if BtnDescToggled == false then
 					_G.changeButtonColor = function()
+					repeat wait() until BtnDescToggled == true
+						repeat wait()
 					TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
@@ -654,7 +650,9 @@ function Flux:Window(text, bottom,mainclr)
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 = _G.PresetColor}
 					):Play()
+				until BtnDescToggled == false
 				end
+				coroutine.wrap(_G.changeButtonColor)()
 					Button:TweenSize(UDim2.new(0, 457, 0, 74), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					TweenService:Create(
 						Title,
@@ -894,35 +892,40 @@ function Flux:Window(text, bottom,mainclr)
 
 			Toggle.MouseButton1Click:Connect(function()
 				if Toggled == false then
-				_G.changeToggleColor = function()
+								_G.changeToggleColor = function()
+				repeat wait() until Toggled == true
+				repeat wait()
 									ToggleCircle:TweenPosition(UDim2.new(0.37, 0,-0.273, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
 					TweenService:Create(
 						ToggleCircle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 =_G.PresetColor}
 					):Play()
-				end
 					ToggleCircle:TweenPosition(UDim2.new(0.37, 0,-0.273, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
 					TweenService:Create(
 						ToggleCircle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 =_G.PresetColor}
 					):Play()
-				else
 					ToggleCircle:TweenPosition(UDim2.new(0, 0,-0.273, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
 					TweenService:Create(
 						ToggleCircle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 = Color3.fromRGB(255,255,255)}
 					):Play()
+				until Toggled == false
 				end
-				Toggled = not Toggled
+				coroutine.wrap(_G.changeToggleColor)()
+			end
 				pcall(callback, Toggled)
+				Toggled = not Toggled
 			end)
 			
 			ArrowBtn.MouseButton1Click:Connect(function()
 				if ToggleDescToggled == false then
 					_G.changeArrowColor = function()
+					repeat wait() until ToggleDescToggled == true
+						repeat wait()
 					TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
@@ -938,7 +941,9 @@ function Flux:Window(text, bottom,mainclr)
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 = _G.PresetColor}
 					):Play()
+									until ToggleDescToggled == false
 				end
+				coroutine.wrap(_G.changeArrowColor)()
 					Toggle:TweenSize(UDim2.new(0, 457, 0, 74), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					TweenService:Create(
 						Title,
@@ -1031,12 +1036,16 @@ function Flux:Window(text, bottom,mainclr)
 			end)
 			if default == true then
 				_G.changeCircleColor = function()
+				repeat wait() until Toggled == true
+					repeat wait()
 				TweenService:Create(
 					ToggleCircle,
 					TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 					{BackgroundColor3 =_G.PresetColor}
 				):Play()
+			until Toggled == false
 			end
+			coroutine.wrap(_G.changeCircleColor)()
 				ToggleCircle:TweenPosition(UDim2.new(0.37, 0,-0.273, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
 				TweenService:Create(
 					ToggleCircle,
@@ -1198,6 +1207,8 @@ function Flux:Window(text, bottom,mainclr)
 			ArrowBtn.MouseButton1Click:Connect(function()
 				if SliderDescToggled == false then
 					_G.changeSliderColor = function()
+					repeat wait() until SliderDescToggled == true
+						repeat wait()
 					TweenService:Create(
 						Value,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
@@ -1213,7 +1224,9 @@ function Flux:Window(text, bottom,mainclr)
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 =_G.PresetColor}
 					):Play()
+					until SliderDescToggled == false
 				end
+				coroutine.wrap(_G.changeSliderColor)()
 					Slider:TweenSize(UDim2.new(0, 457, 0, 101), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					TweenService:Create(
 						Value,
@@ -1480,6 +1493,8 @@ function Flux:Window(text, bottom,mainclr)
 			Dropdown.MouseButton1Click:Connect(function()
 				if DropToggled == false then
 					_G.changeDropdownColor = function()
+					repeat wait() until DropToggled == true
+						repeat wait()
 					TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
@@ -1495,7 +1510,9 @@ function Flux:Window(text, bottom,mainclr)
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 = _G.PresetColor}
 					):Play()
+				until DropToggled == false
 				end
+				coroutine.wrap(_G.changeDropdownColor)()
 					Title.Text = Selected
 					Dropdown:TweenSize(UDim2.new(0, 457, 0, FrameSize), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					TweenService:Create(
@@ -2113,6 +2130,8 @@ function Flux:Window(text, bottom,mainclr)
 			ColorpickerBtn.MouseButton1Click:Connect(function()
 				if ColorPickerToggled == false then
 					_G.changePickerColor = function()
+					repeat wait() until ColorPickerToggled == true
+						repeat wait()
 					TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
@@ -2123,7 +2142,9 @@ function Flux:Window(text, bottom,mainclr)
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 = _G.PresetColor}
 					):Play()
+				until ColorPickerToggled == false
 				end
+				coroutine.wrap(_G.changePickerColor)()
 					ColorSelection.Visible = true
 					HueSelection.Visible = true
 					Colorpicker:TweenSize(UDim2.new(0, 457, 0, 138), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
@@ -2297,12 +2318,15 @@ function Flux:Window(text, bottom,mainclr)
 
 					if RainbowColorPicker then
 						_G.changeRainbowColor = function()
+						repeat wait()
 						TweenService:Create(
 							ToggleCircle,
 							TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 							{BackgroundColor3 =_G.PresetColor}
 						):Play()
+					until RainbowColorPicker == false
 					end
+					coroutine.wrap(_G.changeRainbowColor)()
 						ToggleCircle:TweenPosition(UDim2.new(0.37, 0,-0.273, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
 						TweenService:Create(
 							ToggleCircle,
@@ -2575,6 +2599,8 @@ function Flux:Window(text, bottom,mainclr)
 			ArrowBtn.MouseButton1Click:Connect(function()
 				if TextboxDescToggled == false then
 					_G.changeTextboxColor = function()
+					repeat wait() until TextboxDescToggled == true
+						repeat wait()
 					TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
@@ -2590,7 +2616,9 @@ function Flux:Window(text, bottom,mainclr)
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 = _G.PresetColor}
 					):Play()
+				until TextboxDescToggled == false
 				end
+				coroutine.wrap(_G.changeTextboxColor)()
 					Textbox:TweenSize(UDim2.new(0, 457, 0, 81), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					TweenService:Create(
 						Title,
@@ -2780,6 +2808,7 @@ function Flux:Window(text, bottom,mainclr)
 			Bind.MouseButton1Click:connect(
 				function()
 					_G.changeBindColor = function()
+					repeat wait()
 					TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
@@ -2795,7 +2824,9 @@ function Flux:Window(text, bottom,mainclr)
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 = _G.PresetColor}
 					):Play()
+				until game:GetService("UserInputService").InputBegan:wait()
 				end
+				coroutine.wrap(_G.changeBindColor)()
 					TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
@@ -2876,19 +2907,15 @@ function Flux:Window(text, bottom,mainclr)
 			)
 
 	_G.changeColor = function()
-		Tab.BackgroundColor3 = _G._G.PresetColor
-		CurrentValueFrame.BackgroundColor3 = _G._G.PresetColor
-		SlideCircle.ImageColor3 = _G._G.PresetColor
-		coroutine.wrap(_G.changeBindColor)();
-		coroutine.wrap(_G.changeTextboxColor)();
-		coroutine.wrap(_G.changeRainbowColor)();
-		coroutine.wrap(_G.changePickerColor)();
-		coroutine.wrap(_G.changeDropdownColor)();
-		coroutine.wrap(_G.changeSliderColor)();
-		coroutine.wrap(_G.changeCircleColor)();
-		coroutine.wrap(_G.changeArrowColor)();
-		coroutine.wrap(_G.changeToggleColor)();
-		coroutine.wrap(_G.changeButtonColor)();
+	for i,v in pairs(FluxLib:GetDescendants()) do
+	if v.Name == "Tab" then
+		Tab.BackgroundColor3 = _G.PresetColor
+	elseif v.Name == "CurrentValueFrame" then
+		CurrentValueFrame.BackgroundColor3 = _G.PresetColor
+	elseif v.Name == "SlideCircle" then
+		SlideCircle.ImageColor3 = _G.PresetColor
+	end
+end
 	end
 			
 			Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
