@@ -1,3 +1,9 @@
+if _G.hereiambabyhehe ~= true then
+_G.hereiambabyhehe = true
+elseif _G.hereiambabyhehe == true then
+FluxLib:Destroy()
+FluxLib:Remove()
+end
 local Flux = {RainbowColorValue = 0, HueSelectionPosition = 0}
 local PresetColor = Color3.fromRGB(66, 134, 255)
 local UserInputService = game:GetService("UserInputService")
@@ -5,7 +11,6 @@ local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
 local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
-local CloseBind = Enum.KeyCode.RightControl
 
 local FluxLib = Instance.new("ScreenGui")
 FluxLib.Name = "FluxLib"
@@ -28,13 +33,6 @@ coroutine.wrap(
 		end
 	end
 )()
-
-if _G.hereiambabyhehe ~= true then
-_G.hereiambabyhehe = true
-elseif _G.hereiambabyhehe == true then
-FluxLib:Destroy()
-FluxLib:Remove()
-end
 
 local function MakeDraggable(topbarobject, object)
 	local Dragging = nil
@@ -94,8 +92,7 @@ end
 
 
 
-function Flux:Window(text, bottom,mainclr,toclose)
-	CloseBind = toclose or Enum.KeyCode.RightControl
+function Flux:Window(text, bottom,mainclr)
 	PresetColor = mainclr or Color3.fromRGB(66, 134, 255)
 	local fs = false
 	local MainFrame = Instance.new("Frame")
@@ -196,9 +193,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 	MainFrame:TweenSize(UDim2.new(0, 706, 0, 484), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 	
 	local uitoggled = false
-	UserInputService.InputBegan:Connect(
-		function(io, p)
-			if io.KeyCode == CloseBind then
+		_G.toggleUiHere = function()
 				if uitoggled == false then
 					MainFrame:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					uitoggled = true
@@ -213,8 +208,6 @@ function Flux:Window(text, bottom,mainclr,toclose)
 					uitoggled = false
 				end
 			end
-		end
-	)
 	
 	function Flux:Notification(desc,buttontitle)
 		for i, v in next, MainFrame:GetChildren() do
