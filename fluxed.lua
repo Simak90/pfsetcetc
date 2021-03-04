@@ -1680,6 +1680,7 @@ function Flux:Window(text, bottom,mainclr)
 				end)
 			end
 			function DropFunc:Add(addtext)
+
 				ItemCount = ItemCount + 1
 
 				if ItemCount == 1 then
@@ -1726,9 +1727,9 @@ function Flux:Window(text, bottom,mainclr)
 				end)
 
 				Item.MouseButton1Click:Connect(function()
-					pcall(callback, addtext)
-					Title.Text = text
 					Selected = addtext
+					Title.Text = Selected
+					pcall(callback, addtext)
 					DropToggled = not DropToggled
 					Dropdown:TweenSize(UDim2.new(0, 457, 0, 43), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					TweenService:Create(
