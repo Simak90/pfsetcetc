@@ -5,7 +5,7 @@ FluxLib:Destroy()
 FluxLib:Remove()
 end
 local Flux = {RainbowColorValue = 0, HueSelectionPosition = 0}
-local PresetColor = Color3.fromRGB(66, 134, 255)
+_G.PresetColor = Color3.fromRGB(66, 134, 255)
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
@@ -93,7 +93,7 @@ end
 
 
 function Flux:Window(text, bottom,mainclr)
-	PresetColor = mainclr or Color3.fromRGB(66, 134, 255)
+	_G.PresetColor = mainclr or Color3.fromRGB(66, 134, 255)
 	local fs = false
 	local MainFrame = Instance.new("Frame")
 	local MainCorner = Instance.new("UICorner")
@@ -407,7 +407,7 @@ function Flux:Window(text, bottom,mainclr)
 
 		Tab.Name = "Tab"
 		Tab.Parent = TabHold
-		Tab.BackgroundColor3 = PresetColor
+		Tab.BackgroundColor3 = _G.PresetColor
 		Tab.BorderSizePixel = 0
 		Tab.Size = UDim2.new(0, 205, 0, 40)
 		Tab.AutoButtonColor = false
@@ -642,29 +642,29 @@ function Flux:Window(text, bottom,mainclr)
 					TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = PresetColor}
+						{TextColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						ArrowIco,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{ImageColor3 = PresetColor}
+						{ImageColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						Circle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = PresetColor}
+						{BackgroundColor3 = _G.PresetColor}
 					):Play()
 				end
 					Button:TweenSize(UDim2.new(0, 457, 0, 74), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = PresetColor}
+						{TextColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						ArrowIco,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{ImageColor3 = PresetColor}
+						{ImageColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						ArrowIco,
@@ -679,7 +679,7 @@ function Flux:Window(text, bottom,mainclr)
 					TweenService:Create(
 						Circle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = PresetColor}
+						{BackgroundColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						CircleSmall,
@@ -899,14 +899,14 @@ function Flux:Window(text, bottom,mainclr)
 					TweenService:Create(
 						ToggleCircle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 =PresetColor}
+						{BackgroundColor3 =_G.PresetColor}
 					):Play()
 				end
 					ToggleCircle:TweenPosition(UDim2.new(0.37, 0,-0.273, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
 					TweenService:Create(
 						ToggleCircle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 =PresetColor}
+						{BackgroundColor3 =_G.PresetColor}
 					):Play()
 				else
 					ToggleCircle:TweenPosition(UDim2.new(0, 0,-0.273, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
@@ -926,29 +926,29 @@ function Flux:Window(text, bottom,mainclr)
 					TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = PresetColor}
+						{TextColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						ArrowIco,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{ImageColor3 = PresetColor}
+						{ImageColor3 = _G.PresetColor}
 					):Play()
 										TweenService:Create(
 						Circle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = PresetColor}
+						{BackgroundColor3 = _G.PresetColor}
 					):Play()
 				end
 					Toggle:TweenSize(UDim2.new(0, 457, 0, 74), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = PresetColor}
+						{TextColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						ArrowIco,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{ImageColor3 = PresetColor}
+						{ImageColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						ArrowIco,
@@ -963,7 +963,7 @@ function Flux:Window(text, bottom,mainclr)
 					TweenService:Create(
 						Circle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = PresetColor}
+						{BackgroundColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						CircleSmall,
@@ -1034,14 +1034,14 @@ function Flux:Window(text, bottom,mainclr)
 				TweenService:Create(
 					ToggleCircle,
 					TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-					{BackgroundColor3 =PresetColor}
+					{BackgroundColor3 =_G.PresetColor}
 				):Play()
 			end
 				ToggleCircle:TweenPosition(UDim2.new(0.37, 0,-0.273, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
 				TweenService:Create(
 					ToggleCircle,
 					TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-					{BackgroundColor3 =PresetColor}
+					{BackgroundColor3 =_G.PresetColor}
 				):Play()
 				Toggled = not Toggled
 				pcall(callback, Toggled)
@@ -1149,7 +1149,7 @@ function Flux:Window(text, bottom,mainclr)
 
 			CurrentValueFrame.Name = "CurrentValueFrame"
 			CurrentValueFrame.Parent = SlideFrame
-			CurrentValueFrame.BackgroundColor3 = PresetColor
+			CurrentValueFrame.BackgroundColor3 = _G.PresetColor
 			CurrentValueFrame.BorderSizePixel = 0
 			CurrentValueFrame.Size = UDim2.new((start or 0) / max, 0, 0, 3)
 
@@ -1160,7 +1160,7 @@ function Flux:Window(text, bottom,mainclr)
 			SlideCircle.Position = UDim2.new((start or 0)/max, -6,-1.30499995, 0)
 			SlideCircle.Size = UDim2.new(0, 11, 0, 11)
 			SlideCircle.Image = "rbxassetid://3570695787"
-			SlideCircle.ImageColor3 = PresetColor
+			SlideCircle.ImageColor3 = _G.PresetColor
 
 			ArrowBtn.Name = "ArrowBtn"
 			ArrowBtn.Parent = Slider
@@ -1201,29 +1201,29 @@ function Flux:Window(text, bottom,mainclr)
 					TweenService:Create(
 						Value,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = PresetColor}
+						{TextColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						ArrowIco,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{ImageColor3 = PresetColor}
+						{ImageColor3 = _G.PresetColor}
 					):Play()
 						TweenService:Create(
 						Circle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 =PresetColor}
+						{BackgroundColor3 =_G.PresetColor}
 					):Play()
 				end
 					Slider:TweenSize(UDim2.new(0, 457, 0, 101), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					TweenService:Create(
 						Value,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = PresetColor}
+						{TextColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						ArrowIco,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{ImageColor3 = PresetColor}
+						{ImageColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						ArrowIco,
@@ -1238,7 +1238,7 @@ function Flux:Window(text, bottom,mainclr)
 					TweenService:Create(
 						Circle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 =PresetColor}
+						{BackgroundColor3 =_G.PresetColor}
 					):Play()
 					TweenService:Create(
 						CircleSmall,
@@ -1483,17 +1483,17 @@ function Flux:Window(text, bottom,mainclr)
 					TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = PresetColor}
+						{TextColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						ArrowIco,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{ImageColor3 = PresetColor}
+						{ImageColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						Circle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = PresetColor}
+						{BackgroundColor3 = _G.PresetColor}
 					):Play()
 				end
 					Title.Text = Selected
@@ -1501,12 +1501,12 @@ function Flux:Window(text, bottom,mainclr)
 					TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = PresetColor}
+						{TextColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						ArrowIco,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{ImageColor3 = PresetColor}
+						{ImageColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						ArrowIco,
@@ -1521,7 +1521,7 @@ function Flux:Window(text, bottom,mainclr)
 					TweenService:Create(
 						Circle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = PresetColor}
+						{BackgroundColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						CircleSmall,
@@ -2116,12 +2116,12 @@ function Flux:Window(text, bottom,mainclr)
 					TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = PresetColor}
+						{TextColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						Circle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = PresetColor}
+						{BackgroundColor3 = _G.PresetColor}
 					):Play()
 				end
 					ColorSelection.Visible = true
@@ -2130,12 +2130,12 @@ function Flux:Window(text, bottom,mainclr)
 					TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = PresetColor}
+						{TextColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						Circle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = PresetColor}
+						{BackgroundColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						CircleSmall,
@@ -2300,14 +2300,14 @@ function Flux:Window(text, bottom,mainclr)
 						TweenService:Create(
 							ToggleCircle,
 							TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-							{BackgroundColor3 =PresetColor}
+							{BackgroundColor3 =_G.PresetColor}
 						):Play()
 					end
 						ToggleCircle:TweenPosition(UDim2.new(0.37, 0,-0.273, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
 						TweenService:Create(
 							ToggleCircle,
 							TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-							{BackgroundColor3 =PresetColor}
+							{BackgroundColor3 =_G.PresetColor}
 						):Play()
 
 						OldToggleColor = BoxColor.BackgroundColor3
@@ -2578,29 +2578,29 @@ function Flux:Window(text, bottom,mainclr)
 					TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = PresetColor}
+						{TextColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						ArrowIco,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{ImageColor3 = PresetColor}
+						{ImageColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						Circle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = PresetColor}
+						{BackgroundColor3 = _G.PresetColor}
 					):Play()
 				end
 					Textbox:TweenSize(UDim2.new(0, 457, 0, 81), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = PresetColor}
+						{TextColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						ArrowIco,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{ImageColor3 = PresetColor}
+						{ImageColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						ArrowIco,
@@ -2615,7 +2615,7 @@ function Flux:Window(text, bottom,mainclr)
 					TweenService:Create(
 						Circle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = PresetColor}
+						{BackgroundColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						CircleSmall,
@@ -2783,33 +2783,33 @@ function Flux:Window(text, bottom,mainclr)
 					TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = PresetColor}
+						{TextColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						BindLabel,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = PresetColor}
+						{TextColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						Circle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = PresetColor}
+						{BackgroundColor3 = _G.PresetColor}
 					):Play()
 				end
 					TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = PresetColor}
+						{TextColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						BindLabel,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = PresetColor}
+						{TextColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						Circle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = PresetColor}
+						{BackgroundColor3 = _G.PresetColor}
 					):Play()
 					TweenService:Create(
 						CircleSmall,
@@ -2876,9 +2876,9 @@ function Flux:Window(text, bottom,mainclr)
 			)
 
 	_G.changeColor = function()
-		Tab.BackgroundColor3 = _G.PresetColor
-		CurrentValueFrame.BackgroundColor3 = _G.PresetColor
-		SlideCircle.ImageColor3 = _G.PresetColor
+		Tab.BackgroundColor3 = _G._G.PresetColor
+		CurrentValueFrame.BackgroundColor3 = _G._G.PresetColor
+		SlideCircle.ImageColor3 = _G._G.PresetColor
 		coroutine.wrap(_G.changeBindColor)();
 		coroutine.wrap(_G.changeTextboxColor)();
 		coroutine.wrap(_G.changeRainbowColor)();
