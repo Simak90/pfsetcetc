@@ -738,46 +738,6 @@ function Flux:Window(text, bottom,mainclr)
 					Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 				else
 					Button:TweenSize(UDim2.new(0, 457, 0, 43), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
-					TweenService:Create(
-						Title,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = Color3.fromRGB(255,255,255)}
-					):Play()
-					TweenService:Create(
-						ArrowIco,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{ImageColor3 = Color3.fromRGB(255,255,255)}
-					):Play()
-					TweenService:Create(
-						ArrowIco,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{ImageTransparency = .3}
-					):Play()
-					TweenService:Create(
-						ArrowIco,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{Rotation = 0}
-					):Play()
-					TweenService:Create(
-						Circle,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = Color3.fromRGB(211, 211, 211)}
-					):Play()
-					TweenService:Create(
-						CircleSmall,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundTransparency = 1}
-					):Play()
-					TweenService:Create(
-						Title,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextTransparency = 0.3}
-					):Play()
-					TweenService:Create(
-						Description,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextTransparency = 1}
-					):Play()
 					wait(.4)
 					Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 				end
@@ -957,11 +917,6 @@ function Flux:Window(text, bottom,mainclr)
 					ToggleCircle:TweenPosition(UDim2.new(0.37, 0,-0.273, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
 				else
 					ToggleCircle:TweenPosition(UDim2.new(0, 0,-0.273, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
-					TweenService:Create(
-						ToggleCircle,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = Color3.fromRGB(255,255,255)}
-						):Play()
 			end
 			Toggled = not Toggled
 			pcall(callback, Toggled)
@@ -1075,46 +1030,6 @@ function Flux:Window(text, bottom,mainclr)
 					Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 				else
 					Toggle:TweenSize(UDim2.new(0, 457, 0, 43), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
-					TweenService:Create(
-						Title,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = Color3.fromRGB(255,255,255)}
-					):Play()
-					TweenService:Create(
-						ArrowIco,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{ImageColor3 = Color3.fromRGB(255,255,255)}
-					):Play()
-					TweenService:Create(
-						ArrowIco,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{ImageTransparency = .3}
-					):Play()
-					TweenService:Create(
-						ArrowIco,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{Rotation = 0}
-					):Play()
-					TweenService:Create(
-						Circle,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = Color3.fromRGB(211, 211, 211)}
-					):Play()
-					TweenService:Create(
-						CircleSmall,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundTransparency = 1}
-					):Play()
-					TweenService:Create(
-						Title,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextTransparency = 0.3}
-					):Play()
-					TweenService:Create(
-						Description,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextTransparency = 1}
-					):Play()
 					wait(.4)
 					Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 				end
@@ -1392,51 +1307,6 @@ function Flux:Window(text, bottom,mainclr)
 					Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 				else
 					Slider:TweenSize(UDim2.new(0, 457, 0, 60), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
-					TweenService:Create(
-						Title,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = Color3.fromRGB(255,255,255)}
-					):Play()
-					TweenService:Create(
-						Value,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = Color3.fromRGB(255,255,255)}
-					):Play()
-					TweenService:Create(
-						ArrowIco,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{ImageColor3 = Color3.fromRGB(255,255,255)}
-					):Play()
-					TweenService:Create(
-						ArrowIco,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{ImageTransparency = .3}
-					):Play()
-					TweenService:Create(
-						ArrowIco,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{Rotation = 0}
-					):Play()
-					TweenService:Create(
-						Circle,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = Color3.fromRGB(211, 211, 211)}
-					):Play()
-					TweenService:Create(
-						CircleSmall,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundTransparency = 1}
-					):Play()
-					TweenService:Create(
-						Title,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextTransparency = 0.3}
-					):Play()
-					TweenService:Create(
-						Description,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextTransparency = 1}
-					):Play()
 					wait(.4)
 					Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 				end
@@ -1710,41 +1580,6 @@ function Flux:Window(text, bottom,mainclr)
 				else
 					Title.Text = Selected
 					Dropdown:TweenSize(UDim2.new(0, 457, 0, 43), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
-					TweenService:Create(
-						Title,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = Color3.fromRGB(255,255,255)}
-					):Play()
-					TweenService:Create(
-						ArrowIco,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{ImageColor3 = Color3.fromRGB(255,255,255)}
-					):Play()
-					TweenService:Create(
-						ArrowIco,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{ImageTransparency = .3}
-					):Play()
-					TweenService:Create(
-						ArrowIco,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{Rotation = 0}
-					):Play()
-					TweenService:Create(
-						Circle,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = Color3.fromRGB(211, 211, 211)}
-					):Play()
-					TweenService:Create(
-						CircleSmall,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundTransparency = 1}
-					):Play()
-					TweenService:Create(
-						Title,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextTransparency = 0.3}
-					):Play()
 					wait(.4)
 					Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 				end
@@ -2349,26 +2184,6 @@ function Flux:Window(text, bottom,mainclr)
 					ColorSelection.Visible = false
 					HueSelection.Visible = false
 					Colorpicker:TweenSize(UDim2.new(0, 457, 0, 43), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
-					TweenService:Create(
-						Title,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = Color3.fromRGB(255,255,255)}
-					):Play()
-					TweenService:Create(
-						Circle,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = Color3.fromRGB(211, 211, 211)}
-					):Play()
-					TweenService:Create(
-						CircleSmall,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundTransparency = 1}
-					):Play()
-					TweenService:Create(
-						Title,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextTransparency = 0.3}
-					):Play()
 					wait(.4)
 					Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 				end
@@ -2531,11 +2346,6 @@ function Flux:Window(text, bottom,mainclr)
 						end
 					elseif not RainbowColorPicker then
 						ToggleCircle:TweenPosition(UDim2.new(0, 0,-0.273, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
-						TweenService:Create(
-							ToggleCircle,
-							TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-							{BackgroundColor3 = Color3.fromRGB(255,255,255)}
-						):Play()
 
 						BoxColor.BackgroundColor3 = OldToggleColor
 						Color.BackgroundColor3 = OldColor
@@ -2884,46 +2694,6 @@ function Flux:Window(text, bottom,mainclr)
 					Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 				else
 					Textbox:TweenSize(UDim2.new(0, 457, 0, 43), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
-					TweenService:Create(
-						Title,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = Color3.fromRGB(255,255,255)}
-					):Play()
-					TweenService:Create(
-						ArrowIco,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{ImageColor3 = Color3.fromRGB(255,255,255)}
-					):Play()
-					TweenService:Create(
-						ArrowIco,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{ImageTransparency = .3}
-					):Play()
-					TweenService:Create(
-						ArrowIco,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{Rotation = 0}
-					):Play()
-					TweenService:Create(
-						Circle,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = Color3.fromRGB(211, 211, 211)}
-					):Play()
-					TweenService:Create(
-						CircleSmall,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundTransparency = 1}
-					):Play()
-					TweenService:Create(
-						Title,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextTransparency = 0.3}
-					):Play()
-					TweenService:Create(
-						Description,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextTransparency = 1}
-					):Play()
 					wait(.4)
 					Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 				end
@@ -3118,36 +2888,6 @@ function Flux:Window(text, bottom,mainclr)
 						Key = inputwait .KeyCode.Name
 						isKeyLeft = false
 					end
-					TweenService:Create(
-						Title,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = Color3.fromRGB(255,255,255)}
-					):Play()
-					TweenService:Create(
-						BindLabel,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = Color3.fromRGB(255,255,255)}
-					):Play()
-					TweenService:Create(
-						Circle,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundColor3 = Color3.fromRGB(211, 211, 211)}
-					):Play()
-					TweenService:Create(
-						CircleSmall,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundTransparency = 1}
-					):Play()
-					TweenService:Create(
-						Title,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextTransparency = 0.3}
-					):Play()
-					TweenService:Create(
-						BindLabel,
-						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextTransparency = 0.3}
-					):Play()
 					game:GetService("UserInputService").InputEnded:wait()
 					isKeyLeft = true
 				end
