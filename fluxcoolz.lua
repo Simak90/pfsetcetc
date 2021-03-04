@@ -2740,6 +2740,11 @@ function Flux:Window(text, bottom,mainclr)
 				end
 			end
 			)
+			_G.changeColor = function()
+Tab.BackgroundColor3 = _G.PresetColor
+CurrentValueFrame.BackgroundColor3 = _G.PresetColor
+SlideCircle.ImageColor3 = _G.PresetColor
+end
 			
 			Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 		end
@@ -2748,10 +2753,4 @@ function Flux:Window(text, bottom,mainclr)
 	return Tabs
 end
 return Flux
-
-_G.changeColor = function()
-Tab.BackgroundColor3 = _G.PresetColor
-CurrentValueFrame.BackgroundColor3 = _G.PresetColor
-SlideCircle.ImageColor3 = _G.PresetColor
-end
 end
