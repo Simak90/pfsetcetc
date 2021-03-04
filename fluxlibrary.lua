@@ -1538,6 +1538,7 @@ function Flux:Window(text, bottom,mainclr)
 					):Play()
 				end
 				coroutine.wrap(_G.changeDropdownColor)()
+				repeat wait() until isSelected == true
 					Title.Text = Selected
 					Dropdown:TweenSize(UDim2.new(0, 457, 0, FrameSize), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					TweenService:Create(
@@ -1633,9 +1634,11 @@ function Flux:Window(text, bottom,mainclr)
 				end)
 				
 				Item.MouseButton1Click:Connect(function()
-					pcall(callback, v)
-					Title.Text = text
+					isSelected = false
 					Selected = v
+					Title.Text = Selected
+					isSelected = true
+					pcall(callback, v)
 					DropToggled = not DropToggled
 					Dropdown:TweenSize(UDim2.new(0, 457, 0, 43), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					TweenService:Create(
