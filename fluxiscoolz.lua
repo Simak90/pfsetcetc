@@ -1,9 +1,3 @@
-if _G.hereiambabyhehe ~= true then
-_G.hereiambabyhehe = true
-elseif _G.hereiambabyhehe == true then
-FluxLib:Destroy()
-FluxLib:Remove()
-end
 local Flux = {RainbowColorValue = 0, HueSelectionPosition = 0}
 local PresetColor = Color3.fromRGB(66, 134, 255)
 local UserInputService = game:GetService("UserInputService")
@@ -34,6 +28,13 @@ coroutine.wrap(
 		end
 	end
 )()
+
+if _G.hereiambabyhehe ~= true then
+_G.hereiambabyhehe = true
+elseif _G.hereiambabyhehe == true then
+FluxLib:Destroy()
+FluxLib:Remove()
+end
 
 local function MakeDraggable(topbarobject, object)
 	local Dragging = nil
