@@ -1035,17 +1035,6 @@ function Flux:Window(text, bottom,mainclr)
 				ToggleDescToggled = not ToggleDescToggled
 			end)
 			if default == true then
-				_G.changeCircleColor = function()
-				repeat wait() until Toggled == true
-					repeat wait()
-				TweenService:Create(
-					ToggleCircle,
-					TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-					{BackgroundColor3 =_G.PresetColor}
-				):Play()
-			until Toggled == false
-			end
-			coroutine.wrap(_G.changeCircleColor)()
 				ToggleCircle:TweenPosition(UDim2.new(0.37, 0,-0.273, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
 				TweenService:Create(
 					ToggleCircle,
@@ -2908,11 +2897,11 @@ function Flux:Window(text, bottom,mainclr)
 
 	_G.changeColor = function()
 	for i,v in pairs(game.CoreGui.FluxLib:GetDescendants()) do
-	if v.Name == "Tab" then
+	if v.Name == "Tab" and v.Parent.Name == "TabHold" then
 		Tab.BackgroundColor3 = _G.PresetColor
-	elseif v.Name == "CurrentValueFrame" then
+	elseif v.Name == "CurrentValueFrame" and v.Parent.Name == "SlideFrame" then
 		CurrentValueFrame.BackgroundColor3 = _G.PresetColor
-	elseif v.Name == "SlideCircle" then
+	elseif v.Name == "SlideCircle" and v.Parent.Name == "SlideFrame" then
 		SlideCircle.ImageColor3 = _G.PresetColor
 	end
 end
