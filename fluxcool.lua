@@ -1,7 +1,7 @@
 if _G.hereiambabyhehe ~= true then
 _G.hereiambabyhehe = true
 local Flux = {RainbowColorValue = 0, HueSelectionPosition = 0}
-local _G.PresetColor = Color3.fromRGB(66, 134, 255)
+_G.PresetColor = Color3.fromRGB(66, 134, 255)
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
