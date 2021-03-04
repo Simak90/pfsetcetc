@@ -3116,6 +3116,7 @@ function Flux:Window(text, bottom,mainclr)
 					if inputwait.KeyCode.Name ~= "Unknown" then
 						BindLabel.Text = inputwait .KeyCode.Name
 						Key = inputwait .KeyCode.Name
+						isKeyLeft = false
 					end
 					TweenService:Create(
 						Title,
@@ -3147,16 +3148,20 @@ function Flux:Window(text, bottom,mainclr)
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{TextTransparency = 0.3}
 					):Play()
+					game:GetService("UserInputService").InputEnded:wait()
+					isKeyLeft = true
 				end
 			)
 
 			game:GetService("UserInputService").InputBegan:connect(
 			function(current, pressed)
+			if isKeyLeft == true then
 				if not pressed then
 					if current.KeyCode.Name == Key then
 						pcall(callback)
 					end
 				end
+			end
 			end
 			)
 
