@@ -3027,6 +3027,7 @@ function Flux:Window(text, bottom,mainclr)
 
 			Bind.MouseButton1Click:connect(
 				function()
+					hasInputBegan = false
 					_G.changeBindColor = function()
 					repeat wait()
 					TweenService:Create(
@@ -3044,7 +3045,10 @@ function Flux:Window(text, bottom,mainclr)
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 = _G.PresetColor}
 					):Play()
-				until game:GetService("UserInputService").InputBegan == true
+					game:GetService'UserInputService'.InputBegan:connect(function()
+					hasInputBegan = true
+					end)
+				until hasInputBegan == true
 									TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
