@@ -2907,7 +2907,7 @@ function Flux:Window(text, bottom,mainclr)
 			)
 
 	_G.changeColor = function()
-	for i,v in pairs(FluxLib:GetDescendants()) do
+	for i,v in pairs(game.CoreGui.FluxLib:GetDescendants()) do
 	if v.Name == "Tab" then
 		Tab.BackgroundColor3 = _G.PresetColor
 	elseif v.Name == "CurrentValueFrame" then
