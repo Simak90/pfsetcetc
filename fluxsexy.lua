@@ -191,9 +191,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 	MainFrame:TweenSize(UDim2.new(0, 706, 0, 484), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 	
 	local uitoggled = false
-	UserInputService.InputBegan:Connect(
-		function(io, p)
-			if io.KeyCode == CloseBind then
+	_G.toggleUiHere = function()
 				if uitoggled == false then
 					MainFrame:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					uitoggled = true
@@ -208,8 +206,6 @@ function Flux:Window(text, bottom,mainclr,toclose)
 					uitoggled = false
 				end
 			end
-		end
-	)
 	
 	function Flux:Notification(desc,buttontitle)
 		for i, v in next, MainFrame:GetChildren() do
