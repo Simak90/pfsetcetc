@@ -3044,7 +3044,7 @@ function Flux:Window(text, bottom,mainclr)
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 						{BackgroundColor3 = _G.PresetColor}
 					):Play()
-				until game:GetService("UserInputService").InputBegan:wait()
+				until game:GetService("UserInputService").InputBegan == true
 									TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
