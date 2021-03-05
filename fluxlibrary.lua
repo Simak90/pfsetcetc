@@ -1823,14 +1823,16 @@ function Flux:Window(text, bottom,mainclr)
 				someCountOfPlr = someCountOfPlr + 1
 				end
 				for i,v in pairs(Players:GetPlayers()) do
-				if v.Name == Selected then
+				if v.Name == Title.Text then
 				break
 				else
 				someCountOfSelected = someCountOfSelected + 1
 				if someCountOfPlr == someCountOfSelected then
+				if Title.Text ~= text then
 				Selected = "Target has left"
 				Title.Text = Selected
 				end
+								end
 			end
 		end
 		else Title.Text = text
