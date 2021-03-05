@@ -1828,7 +1828,8 @@ function Flux:Window(text, bottom,mainclr)
 				else
 				someCountOfSelected = someCountOfSelected + 1
 				if someCountOfPlr == someCountOfSelected then
-				Title.Text = "Target has left"
+				Selected = "Target has left"
+				Title.Text = Selected
 				end
 			end
 		end
